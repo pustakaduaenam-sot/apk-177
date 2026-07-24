@@ -1,0 +1,314 @@
+/* ::::: AWAL KODE ROOT ::::: */
+:root {
+/* +++++ UMUM +++++ */
+--link-gambar-cover: url(https://c.files.bbci.co.uk/891F/production/_109430153_4360b4f8-1535-4861-b087-a7f002060e81.jpg);
+--background-list-terpilih: #bec2ff;
+--warna-teks-list-terpilih: #0b149d;
+--link-gambar-icon-list-terpilih: url(https://assets-v2.lottiefiles.com/a/768f5b48-a0dd-11ef-beb9-27c03ddad5a4/7uUzCi04Dk.gif);
+--warna-audio-bar: #4450cb;
+--background-tombol-play: #4450cb;
+}
+/* ::::: AKHIR KODE ROOT ::::: */
+
+/* Awal Splash Screen Penutup Saat Loading */
+.satirpenutupsaatloadingclass {
+background-color: #202125;
+position: fixed;
+z-index: 9;
+width: -webkit-fill-available;
+height: -webkit-fill-available;
+top: 0px;
+left: 0px;
+}
+/* Akhir Splash Screen Penutup Saat Loading */
+
+/* awal sektor css arab */
+@font-face { font-family: 'sakkalmajalla'; src: url('./fonts/SakkalMajalla.ttf'); }
+
+
+/* akhir sektor css arab */
+
+
+
+@font-face {
+font-family: 'Material Icons';
+font-style: normal;
+font-weight: 400;
+src: url(./fonts/teksicon.woff2) format('woff2');
+}
+@font-face { font-family: 'Opensansmedium'; src: url('./fonts/OpenSans-Medium.ttf'); }
+body {
+font-family: 'Opensansmedium';
+user-select: none;
+}
+.material-icons {
+font-family: 'Material Icons';
+font-weight: normal;
+font-style: normal;
+font-size: 24px;
+line-height: 1;
+letter-spacing: normal;
+text-transform: none;
+display: inline-block;
+white-space: nowrap;
+word-wrap: normal;
+direction: ltr;
+-webkit-tap-highlight-color: #ffffff00;
+-webkit-font-feature-settings: 'liga';
+-webkit-font-smoothing: antialiased;
+}
+.material-icons:active {
+transform: scale(0.95);
+opacity: 0.8;
+}
+.bagianutamaaudio{
+background: #202125;
+position: fixed;
+width: 100%;
+height: -webkit-fill-available;
+top: 0px;
+left: 0px;
+border: none;
+}
+.sektordaftarisiaudio{
+width: -webkit-fill-available;
+padding: 0px;
+border: none;
+border-bottom: 1px solid #3c4043;
+background: #202125;
+position: absolute;
+left: 0px;
+top: 0px;
+margin: 0px;
+overflow: scroll;
+overflow-x: hidden;
+z-index: 2;
+}
+.sektordaftarisiaudio > .kontainerjuduldanketeranganclass {
+border: none;
+border-radius: 8px;
+padding: 0px;
+margin: 16px;
+margin-top: 8px;
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-image: var(--link-gambar-cover);
+width: -webkit-fill-available;
+overflow: hidden;
+}
+.sektordaftarisiaudio > .kontainerjuduldanketeranganclass > h1 {
+font-weight: bold;
+margin: 0px;
+background-color: rgba(0, 0, 0, 0.5);
+padding: 0px 16px; padding-top: 10px;
+margin-top: 120px;
+color: #ffffff;
+font-size: 22px;
+font-family: 'sakkalmajalla';
+direction: rtl;
+}
+.sektordaftarisiaudio > .kontainerjuduldanketeranganclass > h2 {
+color: #ffffff;
+text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+background-color: rgba(0, 0, 0, 0.5);
+padding: 0px 16px;
+padding-bottom: 10px;
+margin: 0px;
+font-weight: normal;
+font-size: 22px;
+font-family: 'sakkalmajalla';
+direction: rtl;
+}
+.tempatelemenonline {
+margin: 16px;
+margin-top: 0px;
+}
+.sektordaftarisiaudio > ul{
+padding: 16px;
+padding-top: 0px;
+margin: 0px;
+border: none;
+}
+.sektordaftarisiaudio > ul > li{
+list-style: none;
+display: flex;
+cursor: pointer;
+margin-bottom: 16px;
+border: 1px solid #303134;
+color: #e8eaed;
+background: #303134;
+border-radius: 8px;
+padding: 15px;
+font-size: 15px;
+-webkit-tap-highlight-color: #ffffff00;
+direction: rtl;
+}
+.sektordaftarisiaudio > ul > li:active {
+transform: scale(0.95);
+opacity: 0.8;
+}
+.sektordaftarisiaudio > ul > li > div {
+/*border: 1px solid lime;*/
+width: 100%;
+padding-left: 15px;
+line-height: 1.6;
+text-align: right;
+font-family: 'sakkalmajalla';
+}
+.sektordaftarisiaudio > ul > li > span {
+font-size: 12px;
+}
+.sektordaftarisiaudio > ul > li > div > p {
+margin: 0px;
+/*border: 1px solid yellow;*/
+opacity: 0.6;
+font-size: 19px;
+}
+ul > li.playing{
+pointer-events: none;
+color: var(--warna-teks-list-terpilih);
+background: var(--background-list-terpilih);
+border: 1px solid var(--background-list-terpilih);
+}
+ul > li.playing > span{
+color: #ffffff00;
+width: 40px;
+height: 40px;
+background-image: var(--link-gambar-icon-list-terpilih);
+background-position: center left;
+background-size: 30px;
+background-repeat: no-repeat;
+}
+ul > li.audio-duration{
+font-size: 12px;
+}
+.sektorpengontrolaudio {
+background: #202125;
+padding: 16px;
+position: absolute;
+left: 0px;
+bottom: 0px;
+width: -webkit-fill-available;
+border: none;
+}
+.row > span {
+font-size: 22px;	
+}
+.song-timer {
+border: none;
+color: #e9eaee;
+margin: 4px 0px;
+font-size: 12px;
+}
+.song-timer > span{
+font-size: 12px;
+color: #e9eaee;
+}
+.progress-area{
+height: 10px;
+width: -webkit-fill-available;
+background: #ffffff;
+cursor: pointer;
+margin-bottom: 15px;
+border-radius: 100px;
+-webkit-tap-highlight-color: #ffffff00;
+}
+.progress-area .progress-bar{
+height: inherit;
+width: 0%;
+position: relative;
+border-radius: inherit;
+background: var(--warna-audio-bar);
+-webkit-tap-highlight-color: #ffffff00;
+}
+.top-bar, .progress-area .song-timer, 
+.controls, .sektordaftarisiaudio .sektorpengontrolaudio, .sektordaftarisiaudio ul li{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.controls{
+border: none;
+}
+.controls > i{
+font-size: 28px;
+user-select: none;
+-webkit-text-fill-color: #99a0a6;
+border-radius: 100%;
+}
+.controls #prev{
+margin-right: -13px;
+}
+.controls #next{
+margin-left: -13px;
+}
+.play-pause{
+display: flex;
+cursor: pointer;
+align-items: center;
+justify-content: center;
+width: 53px;
+height: 53px;
+border-radius: 100%;
+background: var(--background-tombol-play);
+-webkit-tap-highlight-color: #ffffff00;
+}
+.play-pause:active{
+transform: scale(0.95);
+opacity: 0.8;
+}
+.play-pause > i{
+text-align: center;
+-webkit-text-fill-color: #ffffff;
+position: absolute;
+border-radius: 100%;
+}
+.song-details{
+text-align: center;
+border: none;
+width: -webkit-fill-available;
+margin: 0px;
+overflow: hidden;
+white-space: nowrap;
+}
+.song-details > p{
+text-overflow: ellipsis;
+background: #202125;
+overflow: hidden;
+margin: 0px;
+padding: 0px;
+border: none;
+direction: rtl;
+font-family: 'sakkalmajalla';
+}
+.name{
+font-size: 23px;
+color: #e9eaee;
+}
+.artist{
+font-size: 20px;
+color: #9ba0a6;
+}
+*{
+box-sizing: border-box;
+}
+@media only screen and (min-width: 600px) {
+/*awal*/
+/* akhir sektor scroll bar */
+::-webkit-scrollbar {
+width: 10px;
+height: 10px;
+}
+::-webkit-scrollbar-track {
+background: #ffffff00;
+}
+::-webkit-scrollbar-thumb {
+background: #686868;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #7b7b7b;
+}
+/* awal sektor scroll bar */
+/*akhir*/
+}
